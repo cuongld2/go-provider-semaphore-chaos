@@ -56,7 +56,6 @@ export const options = {
       errorRate: 0.1,
       errorCode: 500,
       errorBody: errorBody,
-      exclude: '/health',
     };
     const svcDisruptor = new ServiceDisruptor('my-go-app-service', 'default');
     svcDisruptor.injectHTTPFaults(fault, 30);

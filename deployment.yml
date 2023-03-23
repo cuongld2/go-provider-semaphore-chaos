@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
       - name: application
-        image: cuongld2/my-go-app:latest
+        image: your_docker_hub_account/my-go-app:latest
         imagePullPolicy: Always
         envFrom:
         - secretRef:
-            name: test-secret
+            name: dockerhub-secret
         ports:
           - containerPort: 3000
