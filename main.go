@@ -11,7 +11,7 @@ func main() {
 	r := gin.New()
 
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "pong "+fmt.Sprint(time.Now().Unix()))
+		c.String(200, "Current time is: "+fmt.Sprint(time.Now().Unix()))
 	})
 
 	r.Run(":3000")
