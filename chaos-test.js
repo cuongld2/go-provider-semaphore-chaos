@@ -32,10 +32,10 @@ export const options = {
         },
       },
       thresholds: {
-        'http_req_duration{scenario:base}': [],
-        'checks{scenario:base}': [],
-        'http_req_duration{scenario:chaos}': [],
-        'checks{scenario:chaos}': [],
+        'http_req_duration{scenario:base}': ['p(95)<800'],
+        'checks{scenario:base}': ['rate>0.9'],
+        'http_req_duration{scenario:chaos}': ['p(95)<1200'],
+        'checks{scenario:chaos}': ['rate>0.5'],
     },
   };
   
